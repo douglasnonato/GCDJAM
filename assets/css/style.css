@@ -14,7 +14,7 @@
 
 
 body{
-    background-color: #d3d6e0;
+    background-color: #d3d6e0 !important;
     font-family: "Anton", Arial, sans-serif;
 }
 
