@@ -1,0 +1,18 @@
+include components/header
+
+block script
+  script.
+    document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+block content
+  main.home
+    section.content.content--layout
+      .word.word--kidnap(data-image-death='assets/name/img/death.svg' data-images-char-1='assets/name/img/g1.png,assets/name/img/g2.png,assets/name/img/g3.png' data-images-char-2='assets/name/img/c1.png,assets/name/img/c2.png,assets/name/img/c3.png' data-background-colors='#00000000,#00000000') GC
+      .word.word--kidnap.dj(data-image-death='assets/name/img/death.svg' data-images-char-1='assets/name/img/d1.png,assets/name/img/d2.png,assets/name/img/d3.png' data-images-char-2='assets/name/img/j1.png,assets/name/img/j2.png,assets/name/img/j3.png' data-background-colors='#00000000,#00000000') DJ
+      .word.word--kidnap(data-image-death='assets/name/img/death.svg' data-images-char-1='assets/name/img/a1.png,assets/name/img/a2.png,assets/name/img/a3.png' data-images-char-2='assets/name/img/m1.png,assets/name/img/m2.png,assets/name/img/m3.png' data-background-colors='#00000000,#00000000') AM
+    a.enter(href='playlist.html') ENTER
+  .music-toggle
+  //-   a#toggle(onmouseover='togglePlay()' onmouseleave='togglePlay()' data-text-swap='Music on') Music off
+  //- audio#music(loop='loop' src='You_re_No_Help.mp3')
+
+  include components/footer

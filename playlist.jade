@@ -1,0 +1,53 @@
+include components/header
+
+block script
+  script.
+    document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+block content
+  main.playlist
+    section.content.content--layout
+      .word.word--kidnap(data-image-death='assets/name/img/death.svg' data-images-char-1='assets/name/img/g1.png,assets/name/img/g2.png,assets/name/img/g3.png' data-images-char-2='assets/name/img/c1.png,assets/name/img/c2.png,assets/name/img/c3.png' data-background-colors='#00000000,#00000000') GC
+      .word.word--kidnap.dj(data-image-death='assets/name/img/death.svg' data-images-char-1='assets/name/img/d1.png,assets/name/img/d2.png,assets/name/img/d3.png' data-images-char-2='assets/name/img/j1.png,assets/name/img/j2.png,assets/name/img/j3.png' data-background-colors='#00000000,#00000000') DJ
+      .word.word--kidnap(data-image-death='assets/name/img/death.svg' data-images-char-1='assets/name/img/a1.png,assets/name/img/a2.png,assets/name/img/a3.png' data-images-char-2='assets/name/img/m1.png,assets/name/img/m2.png,assets/name/img/m3.png' data-background-colors='#00000000,#00000000') AM
+
+    .grid
+        a.grid__item(href='demo-track')
+          .box
+            .box__shadow
+            .box_names
+              .feat
+                span Feat
+              ul
+                li # 2-D
+                li # Noodle
+                li # Murdoc
+                li # Russel
+            h3.box__title
+              span.box__title-inner(data-hover='DEMO') DEMO
+            h4.box__text
+              span.box__text-inner ❶
+            .box__deco ➩
+        a.grid__item(href='track-1')
+          .box
+            .box__shadow
+            .box_names
+              .feat
+                span Feat
+              ul
+                li # Douglas Nonato
+                li # You
+            h3.box__title
+              span.box__title-inner(data-hover='TRACK 1') TRACK 1
+            h4.box__text
+              span.box__text-inner ❷
+            .box__deco ➩
+        a.grid__item(href='track-1')
+          .box
+            .box__shadow
+            .box_names
+              .submit Submit a new melody
+            h3.box__title
+              span.box__title-inner(data-hover='SUBMIT') SUBMIT
+            .box__deco ➩
+  include components/footer

@@ -1,0 +1,27 @@
+include ../components/header-track
+
+  block content
+    // CONTENT
+    #mixerbg
+      #jcmix.seventrack(data-title='Gorillaz – Feel Good Inc. - 141 bpm' data-record='true')
+        .box__shadow
+        
+        include ../components/mixer-head
+
+        // TRACKS
+        .track(data-url='tracks/Vocals.flac' data-label='Vocals <br> 2-D' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='2-D')
+        .track(data-url='tracks/Bass.flac' data-label='Bass <br> Murdoc' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='murdoc')
+        .track(data-url='tracks/Guitar.flac' data-label='Guitar <br> Noodle' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='noodle')
+        .track(data-url='tracks/Backing.flac' data-label='Synths <br> Noodle' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='noodle')
+        .track(data-url='tracks/Kick.flac' data-label='Kick <br> Russel' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='russel')
+        .track(data-url='tracks/Snare.flac' data-label='Snare <br> Russel' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='russel')
+        .track(data-url='tracks/Cymbals.flac' data-label='Cymbal <br> Russel' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='russel')
+        .track(data-url='../assets/empty.mp3' data-label='Metronome' data-start-muted='true' data-initial-volume='.5' data-initial-pan='0' data-picture='')
+        
+        // CRT DISPLAY
+        include ../components/crt
+
+    include ../components/responsive_modal
+
+    // FOOTER
+    include ../components/footer-track
