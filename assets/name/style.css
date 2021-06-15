@@ -1,0 +1,183 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+/* Color schemes */
+.demo-kidnap {
+	--color-text: #d5c12e;
+}
+
+body {
+	font-family: 'Nunito', monospace;
+	color: var(--color-text);
+	min-height: 100vh;
+}	
+
+canvas{
+	z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+
+.js body {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.js body.demo-kidnap {
+	transition: background-color 0.3s, opacity 0.3s;
+} 
+
+.js body.render {
+	opacity: 1;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: var(--color-link-hover);
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+main.home {
+	position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+a.enter{
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    font-size: 40px;
+    border: 3px solid black;
+    padding: 0 10px;
+}
+
+a.enter:hover{
+	background: black;
+	color: #d3d6e0;
+
+}
+
+.content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.content--fixed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: none;
+	z-index: 100;
+	align-content: space-between;
+	pointer-events: none;
+	padding: 1.5em;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto 4em;
+	grid-template-areas: 	"header tagline"
+							"deco tagline"
+							"deco demos";
+}
+
+.content--layout {
+	grid-template-columns: 100%;
+	padding: 3em 0;
+}
+
+.content--fixed a {
+	pointer-events: auto;
+}
+
+
+/* Common styles for the words */
+.word {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: 'Anton', sans-serif;
+	font-size: 14vw;
+	font-weight: 400;
+	color: #0f0e0f;
+}
+
+.word span {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100%;
+	margin: 5px;
+}
+
+.word.dj{
+	display: flex;
+    flex-direction: column;
+    font-size: 6.5vw;
+    line-height: 6.2vw;
+    margin: 5px;
+}
+
+.word.dj span{
+	margin: 0;
+}
+
+@media screen and (max-width: 50em) {
+	html, body {
+		overflow-x: hidden;
+		width: 100vw;
+		height: 100%;
+	}
+	.content {
+		height: auto;
+		min-height: 0;
+	}
+	.content--layout {
+		overflow: visible;
+	}
+	.demo-magneto .content--layout {
+		padding: 1em 0 0 0;
+	}
+	.content--fixed {
+		display: block;
+		z-index: 1000;
+		position: relative;
+		padding: 0.85em;
+	}
+	.word.word--kidnap {
+		font-size: 3.5em;
+	}
+}
