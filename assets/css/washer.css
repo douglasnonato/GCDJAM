@@ -1,14 +1,14 @@
 #washer{
     height: 100%;
     width: 100%;
-    transform: scale(1.4);
+    transform: scale(.8);
 }
 
 .washer-container{
 	width:300px;
 	height:350px;
-	top:70%;
-	left:50%;
+	top: 10%;
+    left: 45%;
 	display:block;
 	position:absolute;
 	perspective:100%;
@@ -23,7 +23,7 @@
 .washer-container:before{
 	width:100%;
 	height:40%;
-	bottom:-68px;
+	bottom: -198px;
 	right:-25px;
 	display:block;
 	position:absolute;
