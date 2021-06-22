@@ -319,7 +319,7 @@ position: relative;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 4px;
     background: url(../images/pan.png) #d8dbe3 center 35px no-repeat;
 }
 
@@ -622,7 +622,7 @@ a, a:hover, a:link, a:visited {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     /*box-shadow: 6px 6px 16px #9fa6b3, -3px -3px 8px #e8ebf3;*/
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 #jcmix #mixer #channelstrip div[data-channel]:nth-last-child(2){
