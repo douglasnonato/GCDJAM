@@ -1,0 +1,40 @@
+#download{
+    height: 100%;
+    width: 100%;
+    transform: scale(.8);
+}
+
+#download .title{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#download li{
+    list-style: none;
+    margin-bottom: 20px;
+    width: 50%;
+    float: left;
+}
+
+#download li a{
+    font-size: 22px;
+    color: #15181b;
+}
+
+#download li a:hover{
+    color: #24bf87;
+}
+
+#download li a:before{
+    content: "";
+    background-image: url(../images/download.svg);
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin: 3px 10px 0 0;
+}
+
+#download li a:hover:before{
+    background-image: url(../images/download-active.svg);
+}

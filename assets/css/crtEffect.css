@@ -115,6 +115,14 @@
   background-image: url(../images/washer-active.svg);
 }
 
+#download-switcher:before{
+  background-image: url(../images/download.svg);
+}
+
+#download-switcher:checked:before{
+  background-image: url(../images/download-active.svg);
+}
+
 .crtEffect.dance, .crtEffect.washer{
   pointer-events: none;
 }
@@ -136,7 +144,8 @@
 }
 #drums-switcher:checked~.crtEffect.drums::after,
 #dance-switcher:checked~.crtEffect.dance::after,
-#washer-switcher:checked~.crtEffect.washer::after {
+#washer-switcher:checked~.crtEffect.washer::after,
+#download-switcher:checked~.crtEffect.download::after {
   content: " ";
   display: block;
   position: absolute;
@@ -230,14 +239,16 @@
 
 #drums-switcher~.crtEffect.drums > .screen,
 #dance-switcher~.crtEffect.dance > .screen,
-#washer-switcher~.crtEffect.washer > .screen{
+#washer-switcher~.crtEffect.washer > .screen,
+#download-switcher~.crtEffect.download > .screen{
   animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: forwards;
 }
 
 #drums-switcher:checked~.crtEffect.drums > .screen,
 #dance-switcher:checked~.crtEffect.dance > .screen,
-#washer-switcher:checked~.crtEffect.washer > .screen  {
+#washer-switcher:checked~.crtEffect.washer > .screen,
+#download-switcher:checked~.crtEffect.download > .screen  {
   animation: turn-on 4s linear;
   animation-fill-mode: forwards;
 }
@@ -272,7 +283,8 @@
 
 .crtEffect #drums,
 .crtEffect #dance,
-.crtEffect #washer{
+.crtEffect #washer,
+.crtEffect #download{
   visibility: hidden;
 }
 
@@ -281,7 +293,9 @@
 #dance-switcher:checked~.crtEffect.dance .overlay,
 #dance-switcher:checked~.crtEffect #dance,
 #washer-switcher:checked~.crtEffect.washer .overlay,
-#washer-switcher:checked~.crtEffect #washer{
+#washer-switcher:checked~.crtEffect #washer,
+#download-switcher:checked~.crtEffect.download .overlay,
+#download-switcher:checked~.crtEffect #download{
   animation: overlay-anim 2.5s linear;
   animation-fill-mode: forwards;
 }

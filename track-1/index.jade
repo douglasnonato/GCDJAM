@@ -9,9 +9,9 @@ include ../components/header-track
         include ../components/mixer-head
 
         // TRACKS
-        .track(data-url='tracks/electric-guitar-douglas.mp3' data-label='Electric Guitar <br> Douglas Nonato' data-start-muted='false' data-initial-volume='.7' data-initial-pan='0' data-picture='douglas-nonato')
-        .track(data-url='tracks/guitar-solo-douglas.mp3' data-label='Guitar Solo <br> Douglas Nonato' data-start-muted='false' data-initial-volume='.6' data-initial-pan='0' data-picture='douglas-nonato')
-        .track(data-url='../assets/empty.mp3' data-label='you' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='you')
+        .track(data-url='tracks/guitar-base-douglas.mp3' data-label='Guitar Base<br> Douglas Nonato' data-start-muted='false' data-initial-volume='.7' data-initial-pan='0' data-picture='douglas-nonato')
+        .track(data-url='tracks/guitar-solo-douglas.mp3' data-label='Guitar Solo <br> Douglas Nonato' data-start-muted='false' data-initial-volume='.4' data-initial-pan='0' data-picture='douglas-nonato')
+        .track(data-url='tracks/guitar-solo-caua-cobuci.mp3' data-label='Guitar Solo<br> Cauã Cobuci' data-start-muted='false' data-initial-volume='.4' data-initial-pan='0' data-picture='caua-cobuci')
         .track(data-url='../assets/empty.mp3' data-label='you' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='you-2')
         .track(data-url='../assets/empty.mp3' data-label='you' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='you-3')
         .track(data-url='../assets/empty.mp3' data-label='you' data-start-muted='false' data-initial-volume='.5' data-initial-pan='0' data-picture='you-4')
@@ -23,6 +23,10 @@ include ../components/header-track
 
         // CRT DISPLAY
         include ../components/crt
+
+          // DOWNLOAD
+          block download
+            include download
 
     include ../components/responsive_modal
 
