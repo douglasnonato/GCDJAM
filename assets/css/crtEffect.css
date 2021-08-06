@@ -123,8 +123,12 @@
   background-image: url(../images/download-active.svg);
 }
 
-.crtEffect.dance, .crtEffect.washer{
+.crtEffect.dance, .crtEffect.washer, .crtEffect.download{
   pointer-events: none;
+}
+
+#download-switcher:checked~.crtEffect.download{
+  pointer-events: unset;
 }
 
 .crtEffect {
